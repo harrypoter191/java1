@@ -1,0 +1,32 @@
+import java.util.*;
+public class prg4 {
+
+	public static void main(String[] args) {
+
+		
+		 String str1 = "Hello, World!";
+		 System.out.println("Constructor 1: Using a string literal: " + str1);
+		
+		
+	     char[] charArray = {'H', 'e', 'l', 'l', 'o'};
+		 String str2 = new String(charArray);
+		 System.out.println("Constructor 2: Using a character array: " + str2);
+		
+		
+		 String str3 = new String(charArray, 2, 3); 
+		 System.out.println("Constructor 3: Using a portion of a character array: " + str3);
+		
+		
+		 byte[] byteArray = {72, 101, 108, 108, 111}; 
+		 String str4 = new String(byteArray);
+	     System.out.println("Constructor 4: Using bytes and specifying character encoding: " + str4);
+		
+		
+		 String str5 = new String(byteArray, 2, 3); 
+         System.out.println("Constructor 5: Using bytes, specifying character encoding, and specifying range: " + str5);
+		
+
+		 String str6 = new String(str1);
+		 System.out.println("Constructor 6: Using another String object: " + str6);
+		 }
+}
