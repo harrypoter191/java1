@@ -1,0 +1,29 @@
+public class prg6 {
+	public static void main(String[] args) {
+		
+		
+		 StringBuffer sb = new StringBuffer("Hello");
+		
+		 sb.append(" World");
+		 System.out.println("After appending: " + sb);
+		
+		 sb.insert(5, " Java");
+		 System.out.println("After inserting: " + sb);
+		
+		 sb.delete(5, 10);
+		 System.out.println("After deleting: " + sb);
+		
+		 sb.reverse();
+		 System.out.println("After reversing: " + sb);
+		
+		 sb.replace(6, 11, "Program");
+		 System.out.println("After replacing: " + sb);
+		
+		 System.out.println("Capacity of StringBuffer: " + sb.capacity());
+		
+		 System.out.println("Length of StringBuffer: " + sb.length());
+		
+	     sb.ensureCapacity(50);
+		 System.out.println("Capacity after ensureCapacity(50): " + sb.capacity());
+		 }
+	}
