@@ -1,0 +1,27 @@
+
+import java.util.*;
+class TensPlaceComparator implements Comparator<Integer> {
+    public int compare(Integer num1, Integer num2) {
+        int tensPlace1 = (num1 % 100) / 10;
+        int tensPlace2 = (num2 % 100) / 10;
+        return Integer.compare(tensPlace1, tensPlace2);
+        }
+    }
+public class prg2 {
+    public static void main (String[] args) {
+        int lowerBound = 100;
+        int upperBound = 1000;
+        ArrayList<Integer>numbers = new ArrayList<>();
+        Random random = new Random();
+        for (int i = 0; i< 10; i++) {
+            int randomNumber;
+            do {
+                randomNumber = random.nextInt(upperBound - lowerBound + 1) + lowerBound;
+               }  while (randomNumber % 2 != 0 || randomNumber % 5 != 0);
+            numbers.add(randomNumber);
+           }
+        System.out.println("Random numbers: " + numbers);
+        Collections.sort(numbers, new TensPlaceComparator());
+        System.out.println("Sorted numbers according to tens place: " + numbers);
+    }
+}
